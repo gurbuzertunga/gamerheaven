@@ -1,0 +1,30 @@
+<%= @most_voted_article ? @most_voted_article.image : "https://www.usanetwork.com/sites/usanetwork/files/2019/07/Suits_S9-KeyArt-Show-Tile-1920x1080.jpg" %>
+<%= @most_voted_article.title if @most_voted_article %>
+<%= @most_voted_article.body if @most_voted_article %>
+
+<%if @categories%>
+    <% 8.times do |i|%>
+        <article>
+        <span>FEATURED ARTICLE</span>
+        <img src="https://www.usanetwork.com/sites/usanetwork/files/2019/07/Suits_S9-KeyArt-Show-Tile-1920x1080.jpg" alt="suits image" />
+        <div>
+          <h4>Title</h4>
+        </div>
+        </article>
+    <%end%>
+<%else%>
+ <% Category.includes(:latest_articles).each do |cat|%>
+    <% la = cat.latest_articles.first %>
+        <article>
+            <a href="<%=category_path(cat.id)%>" > 
+                <span><%= cat.name%> </span>
+                <img src="<%= la ? la.image : "https://www.usanetwork.com/sites/usanetwork/files/2019/07/Suits_S9-KeyArt-Show-Tile-1920x1080.jpg" %>" alt="suits image" />
+                <div>
+                    <h4>
+                        <%= la ? la.title : 'Be the first to write an article!'  %>
+                    </h4>
+                </div>
+            </a>
+        </article>
+    <%end%>
+<%end%>

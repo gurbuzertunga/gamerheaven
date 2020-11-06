@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gamerheaven</title>
+    <title>Gamer heaven</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/9a2f12287f.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="border flex justify-between py-5">
+    <div class="h-2/4">
+    <%= link_to root_path do %>
+        <%= image_tag("logo.png") %>
+    <% end %>
+    </div>
+    <div>
+      <ul class="flex">
+        <li class="pt-4 px-3">Games</li>
+        <li class="pt-4 px-3">Entertainment</li>
+        <li class="pt-4 px-3">News</li>
+        <li class="pt-4 px-3">Reviews</li>
+      </ul>  
+    </div>
+    <div>
+      <ul class="flex">
+       <% if !current_user%>
+        <li class="pt-4 px-3"><%= link_to 'Login', login_path%></li>
+        <li><a href="#">|</a></li>
+        <li><%= link_to 'Register', signup_path%> </li>
+       <% else %>
+        <li> <%= link_to current_user.username, '#' %> </li>
+        <li> <%= link_to 'Logout', logout_path, method: 'DELETE'%> </li>
+        <% end %>
+      </ul> 
+    </div>
+    </nav>
     <%= yield %>
+    <footer>
+     <%= link_to root_path, 'Home' %>
+    </footer>
   </body>
 </html>
