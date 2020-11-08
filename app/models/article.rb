@@ -1,11 +1,12 @@
 class Article < ApplicationRecord
     validates :title, presence: true
     validates :body, presence: true
-    validates_presence_of :image_link, message: 'You must upload an image'
+    # validates_presence_of :image_link, message: 'You must upload an image'
     validates_presence_of :categories, message: 'You must choose a category'
 
     belongs_to :user
     has_many :votes
+    has_one_attached :picture
 
     has_many :article_categories, class_name: 'ArticleCategory'
     has_many :categories, through: :article_categories, source: :category
@@ -27,11 +28,15 @@ class Article < ApplicationRecord
     end
 
     def unvote(user_id)
-        votes.where(user_id = user_id)
+        votes.where(user_id: user_id).first.destroy
         self.vote_counter = vote_counter - 1
     end
 
     def truncate
-        body.length >= 200 ? body[0..200] + ' ...' : text + ' ...'
+        body.length >= 200 ? body[0..200] + ' ...' : body + ' ...'
+    end
+
+    def truncate_title
+        title.length >= 50 ? body[0..50] + ' ...' : title + ' ...'
     end
 end

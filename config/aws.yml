@@ -1,7 +1,0 @@
-development:
-  access_key_id: AWS_ACCESS_KEY_ID # without quotation marks
-  secret_access_key: AWS_SECRET_KEY_ID # without quotation marks
-
-production:
-  access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %> # get it from terminal environment
-  secret_access_key: <%= ENV["AWS_SECRET_KEY_ID"] %> # get it from terminal environment

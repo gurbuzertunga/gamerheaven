@@ -8,16 +8,16 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
+    @article.save
 
+    # if params[:article][:file]
+    #   s3_service = Aws::S3::Resource.new
+    #   bucket_path = 'diego/' + File.basename(params[:article][:file].original_filename)
 
-    if params[:article][:file]
-      s3_service = Aws::S3::Resource.new
-      bucket_path = 'diego/' + File.basename(params[:article][:file].original_filename)
-
-      s3_file = s3_service.bucket('ror-capstone').object(bucket_path)
-      s3_file.upload_file(params[:article][:file].path, acl: 'public-read')
-      @article.image_link = s3_file.public_url.to_s
-    end
+    #   s3_file = s3_service.bucket('gamerheaven').object(bucket_path)
+    #   s3_file.upload_file(params[:article][:file].path, acl: 'public-read')
+    #   @article.image_link = s3_file.public_url.to_s
+    # end
 
     @article.category_ids = params[:article][:category_ids]
 
@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def unvote_article
-    @article = Article.fond(params[:id])
+    @article = Article.find(params[:id])
     if @article
       @article.unvote(current_user.id)
       if @article.save
@@ -71,6 +71,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :picture)
     end
 end
