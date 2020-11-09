@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    @article.save
+
 
     # if params[:article][:file]
     #   s3_service = Aws::S3::Resource.new
