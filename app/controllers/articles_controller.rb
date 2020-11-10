@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :require_login, only: %i[create new vote_article unvote_article]
- 
+
   def new
     @article = Article.new
   end
@@ -8,7 +8,6 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-
 
     # if params[:article][:file]
     #   s3_service = Aws::S3::Resource.new
@@ -21,14 +20,12 @@ class ArticlesController < ApplicationController
 
     @article.category_ids = params[:article][:category_ids]
 
-
     if @article.save
       redirect_to root_path
     else
       flash.now[:errors] = @article.errors.full_messages
       render 'new'
     end
-
   end
 
   def vote_article
@@ -43,7 +40,7 @@ class ArticlesController < ApplicationController
     else
       redirect_to signup_path
     end
-  end  
+  end
 
   def show
     @article = Article.find(params[:id])
@@ -62,15 +59,16 @@ class ArticlesController < ApplicationController
       redirect_to signup_path
     end
   end
-    
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def require_login
-      redirect_to login_path unless current_user
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :body, :picture)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def require_login
+    redirect_to login_path unless current_user
+  end
+
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :body, :picture)
+  end
 end

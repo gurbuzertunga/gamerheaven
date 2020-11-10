@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Categories", type: :feature do
+RSpec.feature 'Categories', type: :feature do
   before :each do
     @user1 = User.create!(username: 'gurbuz')
   end
@@ -9,8 +9,7 @@ RSpec.feature "Categories", type: :feature do
     visit login_path
     fill_in 'username', with: 'gurbuz'
     click_button 'submit'
-    expect(page).to have_content('FEATURED ARTICLE')    
+    expect(page).to have_content('FEATURED ARTICLE')
     click_link 'Logout'
   end
-
 end

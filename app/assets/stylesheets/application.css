@@ -14,338 +14,335 @@
  *= require_self
  */
 
-
-
 .underline_yellow {
-    text-decoration: underline;
-    text-decoration-color: #dd6b20;
+  text-decoration: underline;
+  text-decoration-color: #dd6b20;
 }
 
 .cat_image_height {
-    height: 48vh;
+  height: 48vh;
 }
 
 @font-face {
-    font-family: CartoGothicBold;
-    src: url(/fonts/carto-gothic-std/CartoGothicStd-Bold.otf)
+  font-family: CartoGothicBold;
+  src: url(/fonts/carto-gothic-std/CartoGothicStd-Bold.otf);
 }
 
 .carto-bold {
-    font-family: 'CartoGothicBold', Arial, Helvetica, sans-serif;
+  font-family: 'CartoGothicBold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: CartoGothicBoldItalic;
-    src: url(/fonts/carto-gothic-std/CartoGothicStd-BoldItalic.otf)
+  font-family: CartoGothicBoldItalic;
+  src: url(/fonts/carto-gothic-std/CartoGothicStd-BoldItalic.otf);
 }
 
 .carto-bold-italic {
-    font-family: 'CartoGothicBoldItalic', Arial, Helvetica, sans-serif;
+  font-family: 'CartoGothicBoldItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: CartoGothicBoldStd;
-    src: url(/fonts/carto-gothic-std/CartoGothicStd-Book.otf)
+  font-family: CartoGothicBoldStd;
+  src: url(/fonts/carto-gothic-std/CartoGothicStd-Book.otf);
 }
 
 .carto-bold-std {
-    font-family: 'CartoGothicBoldStd', Arial, Helvetica, sans-serif;
+  font-family: 'CartoGothicBoldStd', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: CartoGothicBoldStdItalic;
-    src: url(/fonts/carto-gothic-std/CartoGothicStd-Italic.otf)
+  font-family: CartoGothicBoldStdItalic;
+  src: url(/fonts/carto-gothic-std/CartoGothicStd-Italic.otf);
 }
 
 .carto-bold-std-italic {
-    font-family: 'CartoGothicBoldStdItalic', Arial, Helvetica, sans-serif;
+  font-family: 'CartoGothicBoldStdItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoBlack;
-    src: url(/fonts/chivo/Chivo-Black.otf)
+  font-family: ChivoBlack;
+  src: url(/fonts/chivo/Chivo-Black.otf);
 }
 
 .chivo-black {
-    font-family: 'ChivoBlack', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoBlack', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoBlackItalic;
-    src: url(/fonts/chivo/Chivo-BlackItalic.otf)
+  font-family: ChivoBlackItalic;
+  src: url(/fonts/chivo/Chivo-BlackItalic.otf);
 }
 
 .chivo-black-italic {
-    font-family: 'ChivoBlackItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoBlackItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoBold;
-    src: url(/fonts/chivo/Chivo-Bold.otf)
+  font-family: ChivoBold;
+  src: url(/fonts/chivo/Chivo-Bold.otf);
 }
 
 .chivo-bold {
-    font-family: 'ChivoBold', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoBold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoBoldItalic;
-    src: url(/fonts/chivo/Chivo-BoldItalic.otf)
+  font-family: ChivoBoldItalic;
+  src: url(/fonts/chivo/Chivo-BoldItalic.otf);
 }
 
 .chivo-bold-italic {
-    font-family: 'ChivoBoldItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoBoldItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoExtraBold;
-    src: url(/fonts/chivo/Chivo-ExtraBold.otf)
+  font-family: ChivoExtraBold;
+  src: url(/fonts/chivo/Chivo-ExtraBold.otf);
 }
 
 .chivo-extra-bold {
-    font-family: 'ChivoExtraBold', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoExtraBold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoExtraBoldItalic;
-    src: url(/fonts/chivo/Chivo-ExtraBoldItalic.otf)
+  font-family: ChivoExtraBoldItalic;
+  src: url(/fonts/chivo/Chivo-ExtraBoldItalic.otf);
 }
 
 .chivo-extra-bold-italic {
-    font-family: 'ChivoExtraBoldItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoExtraBoldItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoItalic;
-    src: url(/fonts/chivo/Chivo-Italic.otf)
+  font-family: ChivoItalic;
+  src: url(/fonts/chivo/Chivo-Italic.otf);
 }
 
 .chivo-italic {
-    font-family: 'ChivoItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoLight;
-    src: url(/fonts/chivo/Chivo-Light.otf)
+  font-family: ChivoLight;
+  src: url(/fonts/chivo/Chivo-Light.otf);
 }
 
 .chivo-light {
-    font-family: 'ChivoLight', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoLight', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoLightItalic;
-    src: url(/fonts/chivo/Chivo-LightItalic.otf)
+  font-family: ChivoLightItalic;
+  src: url(/fonts/chivo/Chivo-LightItalic.otf);
 }
 
 .chivo-light-italic {
-    font-family: 'ChivoLightItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoLightItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoMedium;
-    src: url(/fonts/chivo/Chivo-Medium.otf)
+  font-family: ChivoMedium;
+  src: url(/fonts/chivo/Chivo-Medium.otf);
 }
 
 .chivo-medium {
-    font-family: 'ChivoMedium', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoMedium', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoMediumItalic;
-    src: url(/fonts/chivo/Chivo-MediumItalic.otf)
+  font-family: ChivoMediumItalic;
+  src: url(/fonts/chivo/Chivo-MediumItalic.otf);
 }
 
 .chivo-medium-italic {
-    font-family: 'ChivoMediumItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoMediumItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoRegular;
-    src: url(/fonts/chivo/Chivo-Regular.otf)
+  font-family: ChivoRegular;
+  src: url(/fonts/chivo/Chivo-Regular.otf);
 }
 
 .chivo-regular {
-    font-family: 'ChivoRegular', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoRegular', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoThin;
-    src: url(/fonts/chivo/Chivo-Thin.otf)
+  font-family: ChivoThin;
+  src: url(/fonts/chivo/Chivo-Thin.otf);
 }
 
 .chivo-thin {
-    font-family: 'ChivoThin', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoThin', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: ChivoThinItalic;
-    src: url(/fonts/chivo/Chivo-ThinItalic.otf)
+  font-family: ChivoThinItalic;
+  src: url(/fonts/chivo/Chivo-ThinItalic.otf);
 }
 
 .chivo-thin-italic {
-    font-family: 'ChivoThinItalic', Arial, Helvetica, sans-serif;
+  font-family: 'ChivoThinItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoBlack;
-    src: url(/fonts/lato/Lato-Black.ttf)
+  font-family: LatoBlack;
+  src: url(/fonts/lato/Lato-Black.ttf);
 }
 
 .lato-black {
-    font-family: 'LatoBlack', Arial, Helvetica, sans-serif;
+  font-family: 'LatoBlack', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoBlackItalic;
-    src: url(/fonts/lato/Lato-BlackItalic.ttf)
+  font-family: LatoBlackItalic;
+  src: url(/fonts/lato/Lato-BlackItalic.ttf);
 }
 
 .lato-black-italic {
-    font-family: 'LatoBlackItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoBlackItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoBold;
-    src: url(/fonts/lato/Lato-Bold.ttf)
+  font-family: LatoBold;
+  src: url(/fonts/lato/Lato-Bold.ttf);
 }
 
 .lato-bold {
-    font-family: 'LatoBold', Arial, Helvetica, sans-serif;
+  font-family: 'LatoBold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoBoldItalic;
-    src: url(/fonts/lato/Lato-BoldItalic.ttf)
+  font-family: LatoBoldItalic;
+  src: url(/fonts/lato/Lato-BoldItalic.ttf);
 }
 
 .lato-bold-italic {
-    font-family: 'LatoBoldItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoBoldItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoHairline;
-    src: url(/fonts/lato/Lato-Hairline.ttf)
+  font-family: LatoHairline;
+  src: url(/fonts/lato/Lato-Hairline.ttf);
 }
 
 .lato-hairline {
-    font-family: 'LatoHairline', Arial, Helvetica, sans-serif;
+  font-family: 'LatoHairline', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoHairlineItalic;
-    src: url(/fonts/lato/Lato-HairlineItalic.ttf)
+  font-family: LatoHairlineItalic;
+  src: url(/fonts/lato/Lato-HairlineItalic.ttf);
 }
 
 .lato-hairline-italic {
-    font-family: 'LatoHairlineItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoHairlineItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoHeavy;
-    src: url(/fonts/lato/Lato-Heavy.ttf)
+  font-family: LatoHeavy;
+  src: url(/fonts/lato/Lato-Heavy.ttf);
 }
 
 .lato-heavy {
-    font-family: 'LatoHeavy', Arial, Helvetica, sans-serif;
+  font-family: 'LatoHeavy', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoHeavyItalic;
-    src: url(/fonts/lato/Lato-HeavyItalic.ttf)
+  font-family: LatoHeavyItalic;
+  src: url(/fonts/lato/Lato-HeavyItalic.ttf);
 }
 
 .lato-heavy-italic {
-    font-family: 'LatoHeavyItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoHeavyItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoItalic;
-    src: url(/fonts/lato/Lato-Italic.ttf)
+  font-family: LatoItalic;
+  src: url(/fonts/lato/Lato-Italic.ttf);
 }
 
 .lato-italic {
-    font-family: 'LatoItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoLight;
-    src: url(/fonts/lato/Lato-Light.ttf)
+  font-family: LatoLight;
+  src: url(/fonts/lato/Lato-Light.ttf);
 }
 
 .lato-light {
-    font-family: 'LatoLight', Arial, Helvetica, sans-serif;
+  font-family: 'LatoLight', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoLightItalic;
-    src: url(/fonts/lato/Lato-LightItalic.ttf)
+  font-family: LatoLightItalic;
+  src: url(/fonts/lato/Lato-LightItalic.ttf);
 }
 
 .lato-light-italic {
-    font-family: 'LatoLightItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoLightItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoMedium;
-    src: url(/fonts/lato/Lato-Medium.ttf)
+  font-family: LatoMedium;
+  src: url(/fonts/lato/Lato-Medium.ttf);
 }
 
 .lato-medium {
-    font-family: 'LatoMedium', Arial, Helvetica, sans-serif;
+  font-family: 'LatoMedium', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoMediumItalic;
-    src: url(/fonts/lato/Lato-MediumItalic.ttf)
+  font-family: LatoMediumItalic;
+  src: url(/fonts/lato/Lato-MediumItalic.ttf);
 }
 
 .lato-medium-italic {
-    font-family: 'LatoMediumItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoMediumItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoRegular;
-    src: url(/fonts/lato/Lato-Regular.ttf)
+  font-family: LatoRegular;
+  src: url(/fonts/lato/Lato-Regular.ttf);
 }
 
 .lato-regular {
-    font-family: 'LatoRegular', Arial, Helvetica, sans-serif;
+  font-family: 'LatoRegular', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoSemiBold;
-    src: url(/fonts/lato/Lato-Semibold.ttf)
+  font-family: LatoSemiBold;
+  src: url(/fonts/lato/Lato-Semibold.ttf);
 }
 
 .lato-semibold {
-    font-family: 'LatoSemiBold', Arial, Helvetica, sans-serif;
+  font-family: 'LatoSemiBold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoSemiBoldItalic;
-    src: url(/fonts/lato/Lato-SemiboldItalic.ttf)
+  font-family: LatoSemiBoldItalic;
+  src: url(/fonts/lato/Lato-SemiboldItalic.ttf);
 }
 
 .lato-semibold-italic {
-    font-family: 'LatoSemiBoldItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoSemiBoldItalic', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoThin;
-    src: url(/fonts/lato/Lato-Thin.ttf)
+  font-family: LatoThin;
+  src: url(/fonts/lato/Lato-Thin.ttf);
 }
 
 .lato-thin {
-    font-family: 'LatoThin', Arial, Helvetica, sans-serif;
+  font-family: 'LatoThin', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: LatoThinItalic;
-    src: url(/fonts/lato/Lato-ThinItalic.ttf)
+  font-family: LatoThinItalic;
+  src: url(/fonts/lato/Lato-ThinItalic.ttf);
 }
 
 .lato-thin-italic {
-    font-family: 'LatoThinItalic', Arial, Helvetica, sans-serif;
+  font-family: 'LatoThinItalic', Arial, Helvetica, sans-serif;
 }
-

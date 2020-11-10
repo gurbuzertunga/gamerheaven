@@ -1,24 +1,69 @@
-# README
+# Lifestyle Articles
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+>  It is the rails capstone project and is compulsory to master the ruby on rails curriculum. This project is all about articles like a blog app.
 
-Things you may want to cover:
+## What it does
 
-* Ruby version
+It's an app for articles.
 
-* System dependencies
+*As a guest user:*
 
-* Configuration
+- You will be able  to create account/log in.
+- You will be able to see all articles of other users.
+- You will not able to write your article.
+- You will not able to give a vote to an article.
 
-* Database creation
+*As a logged-in user:*
 
-* Database initialization
+- You will be able to write your article.
+- You will be able to vote for an article.
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby 2.7.1
+- Rails 6.0.3.2
+- Amazon Web Services for storage
+- VS Code
 
-* Deployment instructions
+## Demo
 
-* ...
+[Live link](https://mygamerheaven.herokuapp.com/)
+
+## Prerequisites
+
+In order to make the program work, you need to have ruby interpreter installed in your system. You can get the latest version of ruby from [official website](https://www.ruby-lang.org/en/downloads/).
+
+# Getting Started
+
+To get a local copy of the repository please run the following commands on your terminal:
+
+```
+$ cd gamerheaven
+```
+
+```bash
+$ git clone https://github.com/gurbuzertunga/gamerheaven.git
+$ cd gamerheaven
+$ bundle install
+$ yarn install --check-files
+$ rake db:migrate
+$ rails s
+```
+
+# Author
+
+👤 **Gürbüz Ertunga**
+
+- Github: [@gurbuzertunga](https://github.com/gurbuzertunga)
+- Twitter: [@dantewuhu](https://twitter.com/dantewuhu)
+- Linkedin: [GurbuzErtunga](https://www.linkedin.com/in/gurbuz-ertunga-a607a2a5/)
+
+## Show your support
+
+Give a :star:️ if you like this project!
+
+## Acknowledgments
+
+- <a href="https://guides.rubyonrails.org/" target="_blank">Rails Guides</a>
+- Thanks for this Website Design [Nelson Sakwa
+](https://www.behance.net/sakwadesignstudio).
