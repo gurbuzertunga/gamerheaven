@@ -8,16 +8,6 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-
-    # if params[:article][:file]
-    #   s3_service = Aws::S3::Resource.new
-    #   bucket_path = 'diego/' + File.basename(params[:article][:file].original_filename)
-
-    #   s3_file = s3_service.bucket('gamerheaven').object(bucket_path)
-    #   s3_file.upload_file(params[:article][:file].path, acl: 'public-read')
-    #   @article.image_link = s3_file.public_url.to_s
-    # end
-
     @article.category_ids = params[:article][:category_ids]
 
     if @article.save

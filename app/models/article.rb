@@ -1,7 +1,6 @@
 class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true
-  # validates_presence_of :image_link, message: 'You must upload an image'
   validates_presence_of :categories, message: 'You must choose a category'
 
   belongs_to :user

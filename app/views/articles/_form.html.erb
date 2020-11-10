@@ -11,8 +11,11 @@
   <%= f.text_area :body, id: 'body', size: '20x6', class:"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   <%= f.label :picture, 'Article Image', class:'block text-gray-700 text-sm font-bold mb-2' %>
   <%= f.file_field :picture, class:"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  <div class="flex justify-between">
   <%= f.label :text, 'Categories', class:'block text-gray-700 text-sm font-bold mb-2' %>
-  <%= f.select :category_ids, Category.all.map{|x| [x.name,x.id]}, {}, multipart: true, id: 'categories', class:"block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" %>
+  <p class="block text-gray-700 text-sm font-bold mb-2'">You can select multiple by holding ctrl!</p>
+  </div>
+  <%= f.select :category_ids, Category.all.map{|x| [x.name,x.id]}, {}, multiple: true, id: 'categories', class:"block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline overflow-hidden" %>
   <div class="mt-4 text-center">
   <%= f.submit "Create Article", class:"bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto align-center" %>
   <%= button_to 'Back', articles_path, class:"bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-auto align-center" %>

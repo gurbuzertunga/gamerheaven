@@ -31,7 +31,7 @@ It's an app for articles.
 
 ## Video Walkthrough of the app
 
-[Video Walkthrough](https://www.loom.com/share/e5c329bf960440fd9a0d483329e293df)
+[Video Walkthrough](https://www.loom.com/share/c62b383705514abca142d3e514bc43a4)
 
 
 ## Prerequisites
@@ -51,9 +51,18 @@ $ git clone https://github.com/gurbuzertunga/gamerheaven.git
 $ cd gamerheaven
 $ bundle install
 $ yarn install --check-files
+$ rails db:create
 $ rake db:migrate
 $ rails s
 ```
+# Creating Categories on a new app
+
+After migrating the database go to your terminal and type:
+
+$ rails console or rails c
+$ Category.create(name:'CategoryNameHere',importance:1)
+
+App is designed to work with 4 category section so limit your categories to only 4
 
 # Author
 
