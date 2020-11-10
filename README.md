@@ -29,6 +29,11 @@ It's an app for articles.
 
 [Live link](https://mygamerheaven.herokuapp.com/)
 
+## Video Walkthrough of the app
+
+[Video Walkthrough](https://www.loom.com/share/e5c329bf960440fd9a0d483329e293df)
+
+
 ## Prerequisites
 
 In order to make the program work, you need to have ruby interpreter installed in your system. You can get the latest version of ruby from [official website](https://www.ruby-lang.org/en/downloads/).
