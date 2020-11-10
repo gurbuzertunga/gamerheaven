@@ -13,7 +13,9 @@
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
     liked:
     <%= @article.vote_counter if @article.vote_counter && @article.vote_counter > 0 %>
+    <% if current_user %>
     <%= link_to voted ? unvotearticle_path(@article.id):votearticle_path(@article.id) do %>
+    <% end %>
     </span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
     <%  if voted %>
