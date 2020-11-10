@@ -1,11 +1,11 @@
   <div class="z-0 relative">
-            <%= image_tag @most_voted_article.picture, :class => "w-full height_main" if @most_voted_article%>
+            <%= image_tag @most_voted_article.picture, :class => "w-full height_main opacity-95" if @most_voted_article%>
             <div class="absolute inset-x-0 top-0 h-8 mt-10 ml-10">
-                <h4 class="text-white underline_yellow text-2xl font-bold">FEATURED ARTICLE</h4>
+                <h4 class="text-white underline_yellow text-2xl font-bold carto-bold">FEATURED ARTICLE</h4>
             </div>
             <div class="absolute inset-x-0 bottom-0 h-8 mb-5 ml-5 text-orange-700 font-bold">
-                <h4 class="text-lg"><%= @most_voted_article.title if @most_voted_article %></h4>
-                <p class="text-white"><%= @most_voted_article.truncate if @most_voted_article %></p>
+                <h4 class="text-lg chivo-black"><%= @most_voted_article.title if @most_voted_article %></h4>
+                <p class="text-white chivo-light"><%= @most_voted_article.truncate if @most_voted_article %></p>
             </div>
         </div>
 <%if @categories%>
@@ -23,13 +23,13 @@
         <% la = cat.latest_articles.first %>
             <a href="<%=category_path(cat.id)%>" class="hover:text-orange-600 hover:bg-white text-lg"> 
                 <div class="w-full z-0 relative">
-                    <%= image_tag la.picture, :class => "w-full h-48"%>
+                    <%= image_tag la.picture, :class => "w-full h-48 opacity-95"%>
                     <div class="absolute top-0 left-0 pt-3 pl-3 text-white hover:text-orange-600 underline_yellow">
-                        <%= content_tag(:div, cat.name, class: "carto-bold-italic") %>
+                        <%= content_tag(:div, cat.name, class: "chivo-black") %>
                     </div>    
                     <div class="absolute bottom-0 left-0 pb-3 pl-3 text-white hover:text-orange-600">
                         <% if la %>
-                            <h5 class="text-sm text-white font-bold"><%= la.truncate_title %></h5>
+                            <h5 class="text-sm text-white chivo-black"><%= la.truncate_title %></h5>
                         <% else %>
                             <h4>Be the first to write an article!</h4>
                         <% end %>
