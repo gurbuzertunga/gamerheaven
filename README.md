@@ -20,11 +20,11 @@ It's an app for articles.
 
 # Index Page ScreenShot
 
-![screenshot](/assets/images/category_index_screenshot.png)
+![screenshot](/public/category_index_screenshot.png)
 
 # Category Page ScreenShot
 
-![screenshot](/assets/images/category_show_screenshot.png)
+![screenshot](/public/category_show_screenshot.png)
 
 ## Built With
 
