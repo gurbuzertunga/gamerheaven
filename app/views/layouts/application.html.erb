@@ -19,12 +19,15 @@
     </div>
     <div>
       <ul class="flex relative">
-      <% Category.all.each do |category| %>
-        <li class="px-3 pt-3 text-lg hover:text-orange-500"><%= link_to category.name, category_path(category), class: "hover:text-orange-600 hover:bg-white lato-regular" %></li>
-      <% end %>
+  
+
+        <li class="mx-3 mt-3"><%= link_to 'Home', root_path, class: "text-lg hover:text-orange-500 hover:bg-white lato-regular" %></li>
+
       <% if current_user %>
-         <span class="absolute mt-10 ml-32"><%= link_to "Write a new article!", new_article_path, class: "hover:text-orange-600 hover:bg-white lato-regular" %></span>
+         <li class="mx-3 mt-3"><%= link_to 'Create new category', new_category_path, class: "hover:bg-white lato-regular text-lg hover:text-orange-500" %></li>
+         <li class="mx-3 mt-3"><%= link_to "Write a new article", new_article_path, class: "text-lg hover:text-orange-500 hover:bg-white lato-regular" %></li>
       <% end %>
+
       </ul>  
     </div>
     <div>
@@ -32,7 +35,7 @@
        <% if !current_user%>
         <li class="px-3 pt-3 text-lg"><%= link_to 'Login', login_path, class: "hover:text-orange-600 hover:bg-white lato-regular", id: "Login"%></li>
         <li class="pt-3 text-lg"><a href="#">|</a></li>
-        <li class="px-3 pt-3 text-lg"><%= link_to 'Register', signup_path, class: "hover:text-orange-600 hover:bg-white lato-regular"%> </li>
+        <li class="px-3 pt-3 text-lg"><%= link_to 'Register', new_user_path, class: "hover:text-orange-600 hover:bg-white lato-regular"%> </li>
        <% else %>
         <li class="text-lg px-3 pt-3"> <%= link_to current_user.username, '#', class: "hover:text-orange-600 hover:bg-white lato-regular" %> </li>
         <li class="pt-3 text-lg"><a href="#">|</a></li>

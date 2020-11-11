@@ -20,7 +20,9 @@
 <%else%>
 <div class="grid grid-cols-4 w-full grid-rows-1">
     <% Category.includes(:latest_articles).each do |cat|%>
-        <% la = cat.latest_articles.first %>
+        <% if cat&.latest_articles&.first%>
+        <% la = cat&.latest_articles&.first %>
+        
             <a href="<%=category_path(cat.id)%>" class="hover:text-orange-600 hover:bg-white text-lg"> 
                 <div class="w-full z-0 relative">
                     <%= image_tag la.picture, :class => "w-full h-48 opacity-95"%>
@@ -36,6 +38,7 @@
                     </div>
                 </div>
             </a>
+        <%end%>        
     <%end%>
 </div>
 <%end%>
