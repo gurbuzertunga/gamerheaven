@@ -1,0 +1,44 @@
+
+
+<% rev = false %>
+<div class="grid grid-cols-4 my-3">
+<% @category.articles.order(created_at: :desc).each_with_index do |art,i| %>
+
+  <div class="bg-gray-500 cat_image_height">
+    <%= image_tag art.picture, :class => "max-w-full cat_image_height" %>
+  </div>
+  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal break-words">
+     <div class="mb-1">
+      <p class="text-lg text-yellow-600 underline_yellow flex items-center mb-3 lato-black">
+        <%= @category.name %>
+      </p>
+      <% if art.vote_counter > 0 %>
+      <p class="text-lg text-gray-600 flex items-center">
+        <%= art.vote_counter if art.vote_counter && art.vote_counter > 0 %>
+        <span class="text-lg px-3 chivo-light">People loved it!</span>
+      </p>
+      <% end %>
+      <div class="text-gray-800 font-bold text-bases mb-2"><%= art.title %></div>
+      <p class="text-gray-700 text-xs"><%= art.truncate %></p>
+    </div>
+    <div class="flex items-center">
+
+      <div class="text-sm">
+        <p class="text-gray-900 chivo-light">by <%= art.user.username %></p>
+        <p class="text-gray-600">
+        <div>
+            <%= link_to 'View full &#8594;'.html_safe, article_path(art.id), class: 'bg-yellow-600 p-1 mt-2 rounded hover:bg-yellow-700' %>
+          </div>
+    
+            <% voted = current_user && art.user_voted?(current_user.id)%>
+            <%= link_to voted ? unvotearticle_path(art.id):votearticle_path(art.id), class:'vote-btn' do %>
+            <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+    <% rev = !rev if (i+1).even? %>
+<% end %>
+</div>

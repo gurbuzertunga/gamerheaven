@@ -1,0 +1,13 @@
+<div class="w-6/12 mx-auto h-screen">
+<h1 class="block text-gray-700 text-sm font-bold mb-2 mt-10">Login to your account</h1>
+<div class="flex items-center border-b border-teal-500 py-2">
+    <span> <%= flash[:login_error] if flash[:login_error] %> </span>
+    <%= form_for :session, url: login_path do |f| %>
+     
+        <%= f.label :username,'Username', class:'block text-gray-700 text-sm font-bold mb-2 border-teal-500 mb-5' %>    
+        <%= f.text_field :username, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', id: 'username' %>
+      
+      <%= f.submit "Login", class:'bg-gray-500 mt-5 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline', id: 'submit' %>
+    <% end %>
+</div>
+</div>

@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gamerheaven</title>
+    <title>Gamer Heaven</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/9a2f12287f.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="relative pb-24 min-h-screen">
+    <nav class="border flex justify-between py-5">
+    <div class="h-2/4 ml-6">
+    <%= link_to root_path do %>
+        <%= image_tag("logo.png") %>
+    <% end %>
+    </div>
+    <div>
+      <ul class="flex relative">
+  
+
+        <li class="mx-3 mt-3"><%= link_to 'Home', root_path, class: "text-lg hover:text-orange-500 hover:bg-white lato-regular" %></li>
+
+      <% if current_user %>
+         <li class="mx-3 mt-3"><%= link_to 'Create new category', new_category_path, class: "hover:bg-white lato-regular text-lg hover:text-orange-500" %></li>
+         <li class="mx-3 mt-3"><%= link_to "Write a new article", new_article_path, class: "text-lg hover:text-orange-500 hover:bg-white lato-regular" %></li>
+      <% end %>
+
+      </ul>  
+    </div>
+    <div>
+      <ul class="flex">
+       <% if !current_user%>
+        <li class="px-3 pt-3 text-lg"><%= link_to 'Login', login_path, class: "hover:text-orange-600 hover:bg-white lato-regular", id: "Login"%></li>
+        <li class="pt-3 text-lg"><a href="#">|</a></li>
+        <li class="px-3 pt-3 text-lg"><%= link_to 'Register', new_user_path, class: "hover:text-orange-600 hover:bg-white lato-regular"%> </li>
+       <% else %>
+        <li class="text-lg px-3 pt-3"> <%= link_to current_user.username, '#', class: "hover:text-orange-600 hover:bg-white lato-regular" %> </li>
+        <li class="pt-3 text-lg"><a href="#">|</a></li>
+        <li class="px-3 pt-3 text-lg mr-6"> <%= link_to 'Logout', logout_path, method: 'DELETE', class: "hover:text-orange-600 hover:bg-white lato-regular"%> </li>
+        <% end %>
+       
+      </ul> 
+    </div>
+    </nav>
+    <main>
     <%= yield %>
+    </main>
+    <footer class="flex justify-between py-5 bg-orange-900 w-full bottom-0 absolute">
+    <div class="h-2/4 mt-3">
+      <%= link_to root_path do %>
+        <%= image_tag("logo.png") %>
+      <% end %>
+    </div>
+      <div class="text-orange-500 mt-5 lato-regular">Privacy Policy Terms & Conditions <span class="text-white">© Copyright 2020. All Rights Reserved.</span></div>
+    <div class="flex">
+    <span class="text-white mt-5 lato-regular">Connect with us: </span>
+    <i class="fab fa-twitter p-4 mx-3 text-2xl bg-orange-500 text-orange-900 rounded-full"></i>
+    <i class="fab fa-instagram p-4 mx-3 text-2xl bg-orange-500 text-orange-900 rounded-full"></i>
+    <i class="fab fa-facebook p-4 mx-3 text-2xl bg-orange-500 text-orange-900 rounded-full"></i>
+    </div>
+    </footer>
   </body>
 </html>
