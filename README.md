@@ -18,6 +18,14 @@ It's an app for articles.
 - You will be able to write your article.
 - You will be able to vote for an article.
 
+# Index Page ScreenShot
+
+![screenshot](/assets/images/category_index_screenshot.png)
+
+# Category Page ScreenShot
+
+![screenshot](/assets/images/category_show_screenshot.png)
+
 ## Built With
 
 - Ruby 2.7.1
